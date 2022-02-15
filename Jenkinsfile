@@ -19,6 +19,11 @@ pipeline{
             steps{
                  echo "This is Master Branch"
             }
+            
+            when { expression { env.BRANCH_NAME == 'Devf' } }
+            steps{
+                 echo "This is Devf Branch"
+            }
          
         }
       
