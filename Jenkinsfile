@@ -20,19 +20,13 @@ pipeline{
                     if(env.BRANCH_NAME == 'Master') {
                         echo "This is Master Branch"
                     }
-                    elseif(env.BRANCH_NAME == 'Devf') {
+                    else if(env.BRANCH_NAME == 'Devf') {
                         echo "This is Devf Branch"
                     }
                 }
                  
             }
-            
-         
-            
-            when { expression { env.BRANCH_NAME == 'Devf' } }
-            steps{
-                 echo "This is Devf Branch"
-            }
+           
          
         }
       
