@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('GIT') {
+        stage('GIT added') {
             steps {
                 git branch: 'Master',
                 credentialsId: 'b271cfaf-6789-4c9e-a00a-e7ccab300d39',
