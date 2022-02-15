@@ -14,5 +14,21 @@ pipeline{
                    echo "Current Branch Name:  "+ env.BRANCH_NAME
             }
         }
+        stage('Branch Operations') {
+            steps {
+                script {
+                    if(env.BRANCH_NAME == 'Master') {
+                        echo "This is Master Branch"
+                    }
+                    else if(env.BRANCH_NAME == 'Devf') {
+                        echo "This is Devf Branch"
+                    }
+                }
+                 
+            }
+           
+         
+        }
+      
     }
 }
