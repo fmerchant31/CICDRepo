@@ -15,27 +15,12 @@ pipeline{
             }
         }
         stage('Branch Operations') {
-            when { expression { env.BRANCH_NAME == 'Devf' } }
-            steps{
-                 echo "This is Devf Branch"
-            }
             when { expression { env.BRANCH_NAME == 'Master' } }
             steps{
                  echo "This is Master Branch"
             }
-            when { expression { env.BRANCH_NAME == 'Devh' } }
-            steps{
-                 echo "This is Devh Branch"
-            }
-            when { expression { env.BRANCH_NAME == 'DevBranch' } }
-            steps{
-                 echo "This is DevBranch Branch"
-            }
-            when { expression { env.BRANCH_NAME == 'QA' } }
-            steps{
-                 echo "This is QA Branch"
-            }
+         
         }
-        
+      
     }
 }
