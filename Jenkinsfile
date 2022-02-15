@@ -15,6 +15,6 @@ pipeline{
             steps { 
                    echo "Current Branch Name:  "+ env.BRANCH_NAME
             }
-      
+        }
     }
 }
