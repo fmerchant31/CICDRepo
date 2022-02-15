@@ -8,10 +8,13 @@ pipeline{
                 url: 'git@github.com:fmerchant31/CICDRepo.git'
             }
         }
+        environment {
+           BRANCH_NAME = "${GIT_BRANCH.split("/")[1]}"
+        }
         stage('Branch Name') {
             steps { 
-                   echo "Current Barnch Name:  "+ env.BRANCH_NAME 
+                   echo "Current Branch Name:  "+ env.BRANCH_NAME
             }
-        }
+      
     }
 }
