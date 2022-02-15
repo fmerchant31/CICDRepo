@@ -15,10 +15,19 @@ pipeline{
             }
         }
         stage('Branch Operations') {
-            when { expression { env.BRANCH_NAME == 'Master' } }
-            steps{
-                 echo "This is Master Branch"
+            steps {
+                script {
+                    if(env.BRANCH_NAME == 'Master') {
+                        echo "This is Master Branch"
+                    }
+                    elseif(env.BRANCH_NAME == 'Devf') {
+                        echo "This is Devf Branch"
+                    }
+                }
+                 
             }
+            
+         
             
             when { expression { env.BRANCH_NAME == 'Devf' } }
             steps{
