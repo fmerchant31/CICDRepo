@@ -1,1 +1,1 @@
-print 'hello by devf'
+print 'hello'
