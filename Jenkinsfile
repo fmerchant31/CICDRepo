@@ -14,5 +14,12 @@ pipeline{
                    echo "Current Branch Name:  "+ env.BRANCH_NAME
             }
         }
+        stage('Branch Operations') {
+            when { expression { env.BRANCH_NAME == 'Devf' } }
+            steps{
+                 echo "This is Devf Branch"
+            }
+        }
+        
     }
 }
