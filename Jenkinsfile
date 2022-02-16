@@ -27,7 +27,7 @@ pipeline{
                         echo "This is QA Branch"
                     }
                     else if(env.BRANCH_NAME == 'Devf') {
-                        echo "This is Devf Branch"
+                        echo "This is Devf Branch!!"
                     }
                     else if(env.BRANCH_NAME == 'Devh') {
                         echo "This is Devh Branch"
