@@ -38,6 +38,19 @@ pipeline{
            
          
         }
+         stage ('Invoke_CD_pipeline') {
+            when {
+                expression {
+                    return env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'qa' || env.BRANCH_NAME == 'master';
+                }
+            }
+            steps {
+                //build job: 'microservice01-cd', parameters: [string(name: 'GIT_BRANCH_NAME', value: env.BRANCH_NAME)]
+               build job: 'CD-demo', propagate: false, wait: false, parameters: [[$class: 'StringParameterValue', name: 'BRANCH_NAME', value: "${env.BRANCH_NAME}"]]
+            }
+        }
+    
+    }
       
     }
 }
