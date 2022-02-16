@@ -49,8 +49,5 @@ pipeline{
                build job: 'CD-demo', propagate: false, wait: false, parameters: [[$class: 'StringParameterValue', name: 'BRANCH_NAME', value: "${env.BRANCH_NAME}"]]
             }
         }
-    
-    }
-      
     }
 }
