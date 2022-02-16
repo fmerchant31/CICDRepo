@@ -41,7 +41,7 @@ pipeline{
          stage ('Invoke_CD_pipeline') {
             when {
                 expression {
-                    return env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'qa' || env.BRANCH_NAME == 'master';
+                    return env.BRANCH_NAME == 'DevBranch' || env.BRANCH_NAME == 'QA' || env.BRANCH_NAME == 'Master';
                 }
             }
             steps {
